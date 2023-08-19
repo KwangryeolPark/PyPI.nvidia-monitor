@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gpu-monitor/__init__.py
+gpu_monitor.egg-info/PKG-INFO
+gpu_monitor.egg-info/SOURCES.txt
+gpu_monitor.egg-info/dependency_links.txt
+gpu_monitor.egg-info/not-zip-safe
+gpu_monitor.egg-info/requires.txt
+gpu_monitor.egg-info/top_level.txt

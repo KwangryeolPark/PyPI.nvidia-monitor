@@ -1,16 +1,16 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='gpu-monitor',
+    name='nvidia-monitor',
     version='0.0.1',
     description='GPU monitoring package written by KwangryeolPark',
     author='pkr7098',
     author_email='pkr7098@gmail.com',
-    url='https://github.com/teddylee777/teddynote',
-    install_requires=['tqdm', 'pandas', 'scikit-learn',],
+    url='https://github.com/KwangryeolPark/PyPI.nvidia-monitor.git',
+    install_requires=['tqdm'],
     packages=find_packages(exclude=[]),
-    keywords=['teddynote', 'teddylee777', 'python datasets', 'python tutorial', 'pypi'],
-    python_requires='>=3.6',
+    keywords=['nvidia-smi', 'gpu', 'monitor'],
+    python_requires='>=3.7',
     package_data={},
     zip_safe=False,
     classifiers=[
