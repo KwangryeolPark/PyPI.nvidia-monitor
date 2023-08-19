@@ -1,7 +1,7 @@
 LICENSE
 README.md
 setup.py
-gpu-monitor/__init__.py
+nvidia_monitor/__init__.py
 nvidia_monitor.egg-info/PKG-INFO
 nvidia_monitor.egg-info/SOURCES.txt
 nvidia_monitor.egg-info/dependency_links.txt
