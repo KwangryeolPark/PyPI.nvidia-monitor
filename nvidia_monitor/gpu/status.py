@@ -1,7 +1,5 @@
-import os
 import subprocess
-import csv
-from queries import STATUS_QUERY
+from nvidia_monitor.queries import STATUS_QUERY
 
 
 class Status(object):
@@ -17,7 +15,7 @@ class Status(object):
         _str_query = f"nvidia-smi --query-gpu={_str_query} --format=csv"
         return _str_query
     
-    def get_gpu_status(
+    def get(
         self,
         verbose:bool=False
     )->list:
@@ -35,7 +33,34 @@ class Status(object):
         for output in outputs:
             dict_output = {}
             for query, value in zip(queries, output):
-                dict_output[query] = value.strip()
+                dict_output[query] = self._preprocess(query, value.strip())
             dict_outputs.append(dict_output)
         
         return dict_outputs
+
+    def _preprocess(
+        self,
+        query:str,
+        value:str,
+    )->str:
+        if query == 'index' or query == 'count' or query == 'temperature.gpu':
+            return int(value)
+        elif query == 'fan.speed' or query == 'utilization.gpu':
+            value = value.replace('%', '').replace(' ', '0')
+            value = float(value)
+            return value
+        elif query == 'memory.used' or query == 'memory.total' or query == 'memory.free':
+            value = value.replace('MiB', '').replace(' ', '')
+            value = float(value)
+            return value
+        elif query == 'power.draw' or query == 'power.draw.average' or query == 'power.limit' or query == 'power.max_limit':
+            value = value.replace('W', '').replace(' ', '')
+            value = float(value)
+            return value
+        return value    
+
+    def keys(
+        self,
+    )->list:
+        return STATUS_QUERY
+    

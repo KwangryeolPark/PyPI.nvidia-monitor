@@ -2,12 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='nvidia_monitor',
-    version='0.0.1',
+    version='1.1.4',
     description='NVIDIA GPU monitoring package written by KwangryeolPark',
     author='pkr7098',
     author_email='pkr7098@gmail.com',
     url='https://github.com/KwangryeolPark/PyPI.nvidia-monitor.git',
-    install_requires=['tqdm'],
+    # install_requires=['tqdm'],
     packages=find_packages(exclude=[]),
     keywords=['nvidia-smi', 'gpu', 'monitor', 'nvidia', 'nvidia-monitor'],
     python_requires='>=3.7',
