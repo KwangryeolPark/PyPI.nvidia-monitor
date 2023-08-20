@@ -16,7 +16,7 @@ STATUS_QUERY = [
     "utilization.gpu",
     "temperature.gpu",
     "power.draw",
-    "power.draw.average",
+#    "power.draw.average",
     "power.limit",
     "power.max_limit",
 ]

@@ -45,6 +45,10 @@ class Process(object):
         elif isinstance(gpu_index, int):
             _str_query = f"nvidia-smi --query-compute-apps={_str_query} --format=csv -i {gpu_index}"
         elif isinstance(gpu_index, list):
+            gpu_index_list = ''
+            for i in gpu_index:
+                gpu_index_list += str(i) + ','
+            gpu_index = gpu_index_list[:-1]
             _str_query = f"nvidia-smi --query-compute-apps={_str_query} --format=csv -i {','.join(gpu_index)}"
         else:
             raise ValueError(f"gpu_index must be int or list or None, not {type(gpu_index)}")

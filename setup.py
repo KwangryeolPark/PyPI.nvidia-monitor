@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nvidia_monitor',
-    version='1.1.6',
+    version='1.1.7',
     description='NVIDIA GPU monitoring package written by KwangryeolPark',
     author='pkr7098',
     author_email='pkr7098@gmail.com',
