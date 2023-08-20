@@ -1,6 +1,6 @@
 import subprocess
-from nvidia_monitor.gpu.status import Status
-from nvidia_monitor.queries import STATUS_QUERY, COMPUTE_QUERY
+from .status import Status
+from .queries import STATUS_QUERY, COMPUTE_QUERY
 from typing import Union
 
 class Process(object):

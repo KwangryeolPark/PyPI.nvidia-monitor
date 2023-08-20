@@ -1,5 +1,5 @@
 import subprocess
-from nvidia_monitor.queries import STATUS_QUERY
+from .queries import STATUS_QUERY
 
 
 class Status(object):

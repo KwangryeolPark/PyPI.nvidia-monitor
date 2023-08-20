@@ -1,6 +1,7 @@
-import nvidia_monitor.queries
-import nvidia_monitor.gpu.process
-import nvidia_monitor.gpu.status
+from .queries import STATUS_QUERY 
+from .queries import COMPUTE_QUERY
+from .process import Process
+from .status import Status
 
-__version__ = '1.1.4'
+__version__ = '1.1.6'
 
